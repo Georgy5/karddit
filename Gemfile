@@ -28,6 +28,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Fix compatibility with psych 4.x for Rails 5.2
+gem "psych", "< 4"
+
 gem 'rails-controller-testing'
 
 # Reduces boot times through caching; required in config/boot.rb
