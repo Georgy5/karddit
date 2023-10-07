@@ -3,17 +3,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '~> 2.6.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
-gem 'sass-rails', '~> 6.0'
+gem 'rails', '~> 6.0', '>= 6.0.6.1'
+gem 'sass-rails', '>= 6'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.7'
 gem 'sdoc', '~> 2.0.3', group: :doc
-gem 'devise', '~> 4.7.3'
+gem 'devise', '~> 4.8.1'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'acts_as_votable', '~> 0.13.1'
 gem 'simple_form', '~> 5.0.3'
@@ -31,28 +31,27 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Fix compatibility with psych 4.x for Rails 5.2
 gem "psych", "< 4"
 
-gem 'rails-controller-testing'
-
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~>4.0'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '~> 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem 'rspec-rails', '~>4.0'
   gem 'database_cleaner'
 end
 
